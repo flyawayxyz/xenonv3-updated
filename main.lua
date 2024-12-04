@@ -1391,7 +1391,7 @@ Util:AddValues{
         AllNPCs = {};
         ShinyToggles = {};
         ItemSellToggles = {};
-        ChosenItemsToSell = {};
+        ChosenItemsToSell = {"Blue Candy", "Green Candy", "Yellow Candy", "Red Candy", "Mysterious Arrow", "Pure Rokakaka", "Rokakaka", "Diamond", "Lucky Arrow", "Lucky Stone Mask", "Dio's Diary", "Steel Ball", "Rib Cage of The Saint's Corpse", "Stone Mask", "Gold Coin", "Quinton's Glove", "Ancient Scroll", "Caesar's Headband", "Clackers", "Zeppeli's Hat"};
         ParsedQuests = {};
         AllMods = {"UzuKee", "BLOODTARO", "Dxscape", "Myst_Ari", "eurycIea", "v_cks", "ezguap", "Tsuzutou", "ReferToWithered", "Illus0", "Pyreiz", "VoidedFlame", "ROUXABOUT", "mixeriiiiiing", "MichDrajo", "hayst4", "ElmoNYC", "Core_CorruptionF", "Brillcake", "AxionTheRevenant", "sammyj0n", "ViveLesPatat", "Zimvasion", "vertiify", "redfoxP", "cakesucker05", "00kamiMio", "itscanii", "SirDeviloper", "0nkka", "Ramdharam", "Olliebutheskenny", "cswag_code", "TwoGio", "KoleRTX2", "Wilpuri", "remendyy", "SpaceNuggies", "CrimsonBeheIit", "warycoolio"};
         AllItems = {"Blue Candy", "Green Candy", "Yellow Candy", "Red Candy", "Mysterious Arrow", "Pure Rokakaka", "Rokakaka", "Diamond", "Lucky Arrow", "Lucky Stone Mask", "Dio's Diary", "Steel Ball", "Rib Cage of The Saint's Corpse", "Stone Mask", "Gold Coin", "Quinton's Glove", "Ancient Scroll", "Caesar's Headband", "Clackers", "Zeppeli's Hat"};
@@ -3379,7 +3379,7 @@ Misc_Sell:Button("Sell selected items 1 time", function()
     end
 end, "auto sells selected items once")
 
-Misc_Sell:Toggle("Auto Sell", true, function(State)
+Misc_Sell:Toggle("Auto Sell", false, function(State)
     Util:SetState("Auto Sell", State)
 
     while Util:GetState("Auto Sell") == true do task.wait()
